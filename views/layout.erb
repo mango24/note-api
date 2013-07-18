@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf8">
+  <title><%= @title + ' | Y' %></title>
+  <link href="/reset.css" rel="stylesheet">
+  <link href="/style.css" rel="stylesheet">
+  <script type="text/javascript" src="/jquery-min.js"><script>
+  <script src="/paging.js"><script>
+  </head>
+  <body>
+    <header>
+      <hgroup>
+        <h1><a href="/">Notes</a></h1>
+        <h2>'with nicknames'</h2>
+      </hgroup>
+    </header>
+
+      <div id="main">
+        <%= yield %>
+      </div>
+
+        <footer>
+          <p><small>This is Footer!!.</small></p>
+        </footer>
+        </body>
+        </html>
+

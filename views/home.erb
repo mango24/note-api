@@ -1,0 +1,41 @@
+<section id="add">
+i  <script type="text/javascript" src="/jquery-min.js"></script>
+  <script src="paging.js"></script>
+<form action="/" method="post">
+  <textarea name="content" placeholder='your notes '></textarea>
+  <textarea name="nick" placeholder='your nickname '></textarea>
+  <input type="submit" value="TakeNote!">
+</form>
+</section>
+<article>
+<% no_of_entries = 0 %>
+<% @notes.each do |one_note| %>
+
+<p class="Notes"> 
+<%= one_note.content + " " %>
+said by  
+<b> <%= " " +  one_note.nick %> </b>
+<% no_of_entries = no_of_entries + 1 %> 
+<% if no_of_entries > 3
+    break 
+end %>
+<% end %>
+
+<div id="continue" style="Display: none">
+  <% z = 0 %>
+  <% @notes.each do |x| %>
+    <% if z > 3 %>
+      <%= x.content + " "%>
+      said by
+      <%= x.nick %>
+      <br>
+<%  end %>
+<% z = z + 1
+  end%>
+</div>
+
+</p><br><br>
+</article>
+<button class="load_more"> Load More </button>
+<br>
+
