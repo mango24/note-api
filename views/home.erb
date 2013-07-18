@@ -14,7 +14,10 @@ i  <script type="text/javascript" src="/jquery-min.js"></script>
 <p class="Notes"> 
 <%= one_note.content + " " %>
 said by  
-<b> <%= " " +  one_note.nick %> </b>
+<b> <%= " " +  one_note.nick %>
+at
+<%= one_note.created_at %>
+ </b>
 <% no_of_entries = no_of_entries + 1 %> 
 <% if no_of_entries > 3
     break 
@@ -28,6 +31,8 @@ end %>
       <%= x.content + " "%>
       said by
       <%= x.nick %>
+      at
+      <%= x.created_at %>
       <br>
 <%  end %>
 <% z = z + 1
